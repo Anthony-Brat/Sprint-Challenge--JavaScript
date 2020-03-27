@@ -1,19 +1,15 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
- function CubiodMaker( length, width, height){
-    
-    } 
-
-    
-    constructor (attributes){
-    this.length = attributes.length;
-    this.width = attributes.width;
-    this.height= attributes.height;
-    };
-    volume(){
-     return (length*width*height);   
+ class CubiodMaker{
+    constructor(attributes){
+        this.length = attributes.length;
+        this.width = attributes.width;
+        this.height = attributes.height;
+    }       
+        volume(){
+            return (length*width*height);   
     }
-    surfArea(){
-        return 2((length*width)+(lenght*height)+(width*height));
+        surfArea(){
+            return 2((length*width)+(lenght*height)+(width*height));
     
 }
 
