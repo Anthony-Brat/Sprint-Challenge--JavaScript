@@ -5,7 +5,7 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */const tyrannosaurus ={
-  object name: 'tyrannosaurus',
+  name: 'tyrannosaurus',
   diet: 'carnivorous',
   weight:'7000kg',
   length:'12m',
@@ -14,7 +14,7 @@
 };
 
 const stegosaurus ={
-  object name: 'stegosaurus',
+  name: 'stegosaurus',
   diet:'herbivorous',
   weight:'2000kg',
   length:'9m',
@@ -22,7 +22,7 @@ const stegosaurus ={
 };
 
 const velociraptor ={
-  object name: 'velociraptor',
+  name: 'velociraptor',
   diet: 'carnivorous',
   weight:'15kg',
   length:'1.8m',
@@ -43,7 +43,7 @@ console.log(tyrannosaurus.weight);
 console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log(stegosaurus.lenght);
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
 console.log(tyrannosaurus.period);
@@ -77,8 +77,8 @@ return `${strings.university}`;
 });
 
 /*Once you have the new array created, log the result. */
-const universities = [];
-console.log(strings.universities);
+
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.*/
 const contactInfo = graduates.map(function(strings){
@@ -89,15 +89,15 @@ return `${strings.first_name} ${strings.email}`;
 "Josh josh@example.com"
 
 Log the result of your new array. */
-const contactInfo = [];
-console.log(strings.contactInfo);
+
+console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = graduates.filter(function(uni){
 return uni.university === "Uni";
 });
 
-const unisWithUni = [];
+
 console.log(unisWithUni);
 
 
@@ -119,6 +119,7 @@ const zooAnimals = [
 ];
 
 /* Request 1: .forEach()*/
+const displayNames = [];
 zooAnimals.forEach(function(names){
 return displayNames.push(`Name: ${names.animal_name} Scientific: ${names.scientific_name}`)
 });
@@ -126,7 +127,7 @@ return displayNames.push(`Name: ${names.animal_name} Scientific: ${names.scienti
 /*The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = [];
+
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -135,9 +136,9 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 const lowCaseAnimalNames = zooAnimals.map(function(lower){
- return `${lower.animal_name}`.toLowerCase;
+ return `${lower.animal_name}`.toLowerCase();
 });
-const lowCaseAnimalNames = [];
+
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -148,7 +149,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 const lowPopulationAnimals = zooAnimals.filter(function(lowpop){
 return lowpop.population < 5
 });
-const lowPopulationAnimals = [];
+
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -157,9 +158,9 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationTotal = zooAnimals.reduce(function(accumulator, pop){
-return accumulator + pop
-}, 0);
-const populationTotal = 0;
+return accumulator + pop ;
+},);
+
 console.log(populationTotal);
 
 
